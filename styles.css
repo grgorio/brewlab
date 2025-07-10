@@ -1,0 +1,283 @@
+/* === General Styles === */
+body { 
+  background-color: #271300;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  color: #F2E1C1;
+  margin: 0 25px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+#hero-section {
+  text-align: center;
+  margin-top: 60px;
+}
+
+#filter-instructions {
+  display: block;
+}
+
+#espresso-instructions {
+  display: none;
+}
+
+h1 {
+  font-size: 40px; 
+  font-weight: 800;
+  color: #FFF5E1;
+  line-height: 0%;
+}
+
+h2 {
+  color: #D2A679;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+h4 {
+  font-weight: 600;
+  font-size: 23px;
+  margin-top: -5px;
+}
+
+h5 {
+  font-weight: 600;
+  font-size: 23px;
+}
+
+.brewing-method {
+  display: flex;
+  margin-bottom: 4em;
+  flex-direction: column;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 2em;
+  margin-top: -10px;
+}
+
+.hide {
+  font-weight: 600;
+  margin-bottom: 0.5em;
+  opacity: 0;
+}
+
+.icon-div {
+  display: flex;
+  flex-direction: row;
+  margin-left: 3px;
+}
+
+.brewing-method label {
+  transition: 200ms;
+  margin-right: 2em;
+  margin-bottom: -30px;
+}
+
+.brewing-method input[type=radio]+label img {
+  filter: invert(16%) sepia(7%) saturate(4305%) hue-rotate(338deg) brightness(98%) contrast(88%);
+}
+
+.brewing-method input[type=radio]:checked+label img {
+  filter: invert(79%) sepia(6%) saturate(2182%) hue-rotate(43deg) brightness(97%) contrast(83%);
+}
+
+.brewing-method input[type=radio]:hover+label img {
+  filter: invert(30%) sepia(18%) saturate(1112%) hue-rotate(342deg) brightness(98%) contrast(87%);
+  cursor: pointer;
+}
+
+.button-div,
+.button-div-2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.button-div input[type=radio]+label,
+.button-div-2 input[type=radio]+label {
+  background-color: #4B2E1D;
+  border-radius: 4px;
+  border: 2px solid #C09678;
+  color: #D2A679;
+  font-weight: 600;
+  padding: 12px 36px;
+  font-size: 18px;
+  transition: 200ms;
+  margin-right: 0;
+  min-width: unset;
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.button-div input[type=radio]:hover+label,
+.button-div-2 input[type=radio]:hover+label {
+  background-color: #6F4E37;
+  border: 2px solid #E6C7A0;
+  color: #FFF5E1;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.button-div input[type=radio]:focus+label,
+.button-div-2 input[type=radio]:focus+label {
+  background-color: #C8E29B;
+  border: 2px solid #A8C87C;
+  color: #3A1F14;
+  box-shadow: 0 0 8px #C8E29B;
+}
+
+.button-div input[type=radio]:checked+label,
+.button-div-2 input[type=radio]:checked+label {
+  background-color: #A8C87C;
+  border: 2px solid #8BAC68;
+  color: #271300;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+  transform: scale(0.98);
+}
+
+.a {
+  background-color: #4B2E1D;
+}
+
+.a:hover {
+  background-color: #D3A98A;
+}
+
+.a:active {
+  background-color: #C09678;
+}
+
+.calculator-panel {
+  background-color: #2A160C;
+  border: 2px solid #8C5A3A;
+  border-radius: 4px;
+  margin-right: 3em;
+  padding: 24px;
+}
+
+#section {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  margin-top: 60px;
+}
+
+.hide-radio {
+  display: none;
+}
+
+.ratio-button {
+  display: none;
+}
+
+.coffee-dose input[type=number] {
+  background-color: #3A1F14;
+  border: 1px solid #8C5A3A;
+  padding: 12px;
+  color: #F2E1C1;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  width: 250px;
+  border-radius: 4px;
+  margin: -10px 0;
+  font-weight: 500;
+  -moz-appearance: textfield;
+}
+
+.coffee-dose input[type=number]::-webkit-outer-spin-button,
+.coffee-dose input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.coffee-dose input[type=number]:focus {
+  border: 3px solid #8C5A3A;
+  outline: none;
+}
+
+.coffee-dose {
+  margin-top: 5em;
+}
+
+.roast-level {
+  margin-top: 3em;
+  margin-bottom: 1em;
+}
+
+#ratio {
+  display: block;
+  margin-top: 3em;
+  margin-bottom: 1em;
+}
+
+.close-paragraph {
+  line-height: 0%;
+}
+
+#hideFilter {
+  display: block;
+}
+
+.flex {
+}
+
+@media (max-width: 1200px) {
+  .button-div,
+  .button-div-2 {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  #section {
+    flex-direction: column;
+  }
+
+  .button-div,
+  .button-div-2 {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .button-div input[type=radio]+label,
+  .button-div-2 input[type=radio]+label {
+    padding: 12px 24px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  #section {
+    flex-direction: column;
+  }
+
+  .calculator-panel {
+    margin-right: 0; /* Remove right margin on mobile */
+  }
+
+  .button-div,
+  .button-div-2 {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .button-div input[type=radio]+label,
+  .button-div-2 input[type=radio]+label {
+    padding: 12px 24px;
+    width: 100%;
+    box-sizing: border-box; /* This is the key fix */
+    text-align: center;
+  }
+}
+

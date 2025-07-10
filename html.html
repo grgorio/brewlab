@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- following lines for Brave Browser to show font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <section id="hero-section">
+        <h1>☕ Brew Better: Coffee Calculator</h1>
+        <h2>By Gregorio</h2>
+    </section>
+    <section id="section">
+        <div class="calculator-panel">
+            <div class="brewing-method">
+                <h4>Brewing Method</h4>
+                <div class="icon-div">
+                    <input type="radio" id="filter" name="brew-method" class="hide-radio" checked>
+                    <label for="filter" class="center">
+                            <img src="coffee-image.svg">
+                    </label>
+                    <input type="radio" id="espresso" name="brew-method" class="hide-radio">
+                    <label for="espresso" class="center" style="margin-right:0;">
+                        <img class="brew-method-img" src="espresso-image.svg">
+                    </label>
+                </div>
+            </div>
+            <div class="coffee-dose"> 
+                <h4>Coffee Dose</h4>
+                    <input type="number" name="dose" id="dose" placeholder="Grams">
+            </div>
+            <div class="roast-level">
+                <h4>Roast Level</h4>
+                <div class="button-div">
+                    <input type="radio" class="hide-radio" id="light" name="roast-level" onclick="tempText('200-205°F (93-96°C)', '202-206°F (94-96°C)')" onchange="setMultiplier(this.value)" value="2.35" checked>
+                    <label for="light">Light</label>
+                    <input type="radio" class="hide-radio" id="medium" name="roast-level" onclick="tempText('195-202°F (90-94°C)', '198-202°F (92-94°C)')" onchange="setMultiplier(this.value)" value="2.2">
+                    <label for="medium">Medium</label>
+                    <input type="radio" class="hide-radio" id="dark" name="roast-level" onclick="tempText('185-195°F (85-90°C)', '190-195°F (88-90°C)')" onchange="setMultiplier(this.value)" value="1.5">
+                    <label for="dark" style="margin-right: 0;">Dark</label>
+                </div>
+                  
+            </div>
+            <div id="ratio">
+                <h4>Ratio</h4>
+                <div class="button-div-2">
+                    <input type="radio" onchange="setMultiplier(this.value)" value="15" class="ratio-button" id="1:15" name="ratio" checked>
+                    <label for="1:15">1:15</label>
+                    <input type="radio" onchange="setMultiplier(this.value)" value="16" class="ratio-button" id="1:16" name="ratio">
+                    <label for="1:16">1:16</label>
+                    <input type="radio" onchange="setMultiplier(this.value)" value="17" class="ratio-button" id="1:17" name="ratio">
+                    <label for="1:17">1:17</label>
+                    <input type="radio" onchange="setMultiplier(this.value)" value="18" class="ratio-button" id="1:18" name="ratio">
+                    <label for="1:18">1:18</label>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+        <div id="filter-instructions">
+            <h3>Instructions</h3>
+            <h2>This is just a starting point and not a one-size-fits-all method. Always adjust based on your taste</h2>
+            <p>Brew <span id="filter-temp"></span><span id="hide-filter">200-205°F (93-96°C)</span> of water<br>Grind your coffee</p>
+            <p>0:00 - 0:45 Bloom with a light circular motion until <span id="bloom"></span> grams. 
+                <br>Pick up the brewer, shake it gently in two spots, then set it down.
+                <br>0:45 - 2:00 First pour is a light circular motion to <span id="first-pour"> grams</span>
+                <br>Vibrate the same way as during the bloom.
+                <br>2:00 - 4:00 Second pour is a heavy pour closer to the center.<span id="second-pour"> grams</span></p>
+        </div>
+        <div id="espresso-instructions" style="display:none">
+            <h3>Instructions</h3>
+            <h2>This is just a starting point and not a one-size-fits-all method. Always adjust based on your taste</h2>
+            <div class="flex">
+                <div>
+                    <h5>Overview</h5>
+                    <p>Coffee: <span id="dose-view"></span>g<br>
+                        Yield: <span id="yield-espresso"></span>g<br>
+                        Tempature: <span id="espresso-temp"></span><span id="hide-espresso">202-206°F (94-96°C)</span>
+                    </p>
+                </div>
+                <div>
+                    <h5>Pre-sets</h5>
+                    <p>Line Pressure: 0-3.5s<br>
+                    9 Bar Until Done</span>
+                    </p>
+                </div>
+                
+                <span id="espresso-output"></span>
+                <span id="espresso-time"></span>
+                
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

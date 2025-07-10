@@ -1,7 +1,7 @@
 # brewlab
 A minimalist espresso and pour-over coffee calculator built with HTML, CSS, and JavaScript
 
-A clean and simple web app that lets you tweak and perfect your espresso and pour-over recipes—no fuss, no math headaches. Adjust brew variables like coffee amount, water ratio, and roast level all in one intuitive panel.
+Brew better with less effort. This clean, no-fuss web app helps you dial in your espresso and pour-over recipes by adjusting key variables—coffee dose, water ratio, and roast level—all in one intuitive panel. No math, just great coffee.
 
 ---
 
